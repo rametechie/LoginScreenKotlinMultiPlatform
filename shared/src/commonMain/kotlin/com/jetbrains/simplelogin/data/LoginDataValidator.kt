@@ -1,7 +1,5 @@
 package com.jetbrains.simplelogin.data
 
-import android.util.Patterns
-
 class LoginDataValidator {
 
     sealed class Result {
@@ -21,5 +19,16 @@ class LoginDataValidator {
         return if (password.length > 5) Result.Success else Result.Error("Password must be >5 characters")
     }
 
-    private fun isEmailValid(email: String) = Patterns.EMAIL_ADDRESS.matcher(email).matches()
+    private fun isEmailValid(email: String) = emailRegex.matches(email)
+
+    companion object {
+        private val emailRegex =
+            ("[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
+                    "\\@" +
+                    "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
+                    "(" +
+                    "\\." +
+                    "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
+                    ")+").toRegex()
+    }
 }
