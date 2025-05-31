@@ -1,6 +1,7 @@
 package com.jetbrains.simplelogin.data
 
 import com.jetbrains.simplelogin.data.model.LoggedInUser
+import com.jetbrains.simplelogin.randomUUID
 
 
 /**
