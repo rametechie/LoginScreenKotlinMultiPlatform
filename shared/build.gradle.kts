@@ -13,9 +13,11 @@ kotlin {
         val commonMain by getting
         val commonTest by getting
         val androidMain by getting
-        val androidTest by getting
+        val androidUnitTest by getting
 
-        // 1. Create the common iOS source set
+        // If you also have instrumented tests, you would add:
+        // val androidInstrumentedTest by getting
+
         val iosMain by creating {
             dependsOn(commonMain)
         }
@@ -23,8 +25,6 @@ kotlin {
             dependsOn(commonTest)
         }
 
-        // 2. Make platform-specific iOS source sets depend on the common iOS source sets
-        //    You can get them by name after the targets are defined.
         val iosX64Main by getting {
             dependsOn(iosMain)
         }
@@ -53,4 +53,10 @@ android {
     defaultConfig {
         minSdk = 24
     }
+    // You might need to configure sourceSet names here too if you have custom paths
+    // sourceSets {
+    //     getByName("main") { java.srcDirs("src/androidMain/kotlin") }
+    //     getByName("test") { java.srcDirs("src/androidUnitTest/kotlin") } // For local unit tests
+    //     getByName("androidTest") { java.srcDirs("src/androidInstrumentedTest/kotlin") } // For instrumented tests
+    // }
 }
