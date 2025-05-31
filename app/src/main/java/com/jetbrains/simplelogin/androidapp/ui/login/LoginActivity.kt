@@ -2,11 +2,13 @@ package com.jetbrains.simplelogin.androidapp.ui.login
 
 import android.app.Activity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
+import com.jetbrains.simplelogin.Greeting
 import com.jetbrains.simplelogin.androidapp.R
 import com.jetbrains.simplelogin.androidapp.data.LoginDataSource
 import com.jetbrains.simplelogin.androidapp.data.LoginDataValidator
@@ -16,6 +18,7 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.i("Login Activity", "Hello from shared module: " + (Greeting().greet()))
 
         setContent {
             MaterialTheme {

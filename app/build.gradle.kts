@@ -62,6 +62,7 @@ dependencies {
     implementation(libs.compose.foundation)
     implementation(libs.compose.material3)
     implementation(libs.compose.runtime)
+    implementation(project(":shared"))
     debugImplementation(libs.compose.ui.tooling)
 
     // Coroutines
