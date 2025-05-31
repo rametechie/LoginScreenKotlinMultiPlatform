@@ -1,6 +1,6 @@
-package com.jetbrains.simplelogin.androidapp.data
+package com.jetbrains.simplelogin.data
 
-import com.jetbrains.simplelogin.androidapp.data.model.LoggedInUser
+import com.jetbrains.simplelogin.data.model.LoggedInUser
 import java.io.IOException
 
 /**

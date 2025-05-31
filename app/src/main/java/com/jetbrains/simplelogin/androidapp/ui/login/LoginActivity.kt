@@ -10,9 +10,9 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import com.jetbrains.simplelogin.Greeting
 import com.jetbrains.simplelogin.androidapp.R
-import com.jetbrains.simplelogin.androidapp.data.LoginDataSource
-import com.jetbrains.simplelogin.androidapp.data.LoginDataValidator
-import com.jetbrains.simplelogin.androidapp.data.LoginRepository
+import com.jetbrains.simplelogin.data.LoginDataSource
+import com.jetbrains.simplelogin.data.LoginDataValidator
+import com.jetbrains.simplelogin.data.LoginRepository
 
 class LoginActivity : AppCompatActivity() {
 

@@ -1,4 +1,4 @@
-package com.jetbrains.simplelogin.androidapp.data
+package com.jetbrains.simplelogin.data
 
 import android.util.Patterns
 
