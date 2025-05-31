@@ -30,7 +30,7 @@ kotlin {
             // put your Multiplatform dependencies here
         }
         commonTest.dependencies {
-            implementation(libs.kotlin.test)
+//            implementation(libs.kotlin.test)
         }
     }
 }
