@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0C640FD82DEC442200ECAEEE /* Shared.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C640FD62DEC441A00ECAEEE /* Shared.xcframework */; };
+		0C640FD92DEC442200ECAEEE /* Shared.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C640FD62DEC441A00ECAEEE /* Shared.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		0CC7490D2DEBA2CC00684704 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -23,7 +28,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0C640FDA2DEC442200ECAEEE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0C640FD92DEC442200ECAEEE /* Shared.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0C640FD22DEC3F5900ECAEEE /* Shared */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = Shared; path = "../shared/build/xcframework/Shared.xcframework/ios-arm64/Shared.framework/Shared"; sourceTree = "<group>"; };
+		0C640FD62DEC441A00ECAEEE /* Shared.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Shared.xcframework; sourceTree = "<group>"; };
 		0CC748FE2DEBA2C900684704 /* SimpleloginIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleloginIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CC7490C2DEBA2CC00684704 /* SimpleloginIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleloginIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CC749162DEBA2CC00684704 /* SimpleloginIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleloginIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C640FD82DEC442200ECAEEE /* Shared.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,13 +94,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C640FD12DEC3F5900ECAEEE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C640FD22DEC3F5900ECAEEE /* Shared */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		0CC748F52DEBA2C900684704 = {
 			isa = PBXGroup;
 			children = (
 				0CC749002DEBA2C900684704 /* SimpleloginIOS */,
 				0CC7490F2DEBA2CC00684704 /* SimpleloginIOSTests */,
 				0CC749192DEBA2CC00684704 /* SimpleloginIOSUITests */,
+				0C640FD12DEC3F5900ECAEEE /* Frameworks */,
 				0CC748FF2DEBA2C900684704 /* Products */,
+				0C640FD62DEC441A00ECAEEE /* Shared.xcframework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +135,7 @@
 				0CC749362DEBA4F700684704 /* ShellScript */,
 				0CC748FB2DEBA2C900684704 /* Frameworks */,
 				0CC748FC2DEBA2C900684704 /* Resources */,
+				0C640FDA2DEC442200ECAEEE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -432,6 +465,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jetbrians.SimpleloginIOS;
@@ -472,6 +509,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jetbrians.SimpleloginIOS;
