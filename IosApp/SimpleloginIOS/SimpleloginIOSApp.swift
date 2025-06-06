@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import Shared
 
 @main
 struct SimpleloginIOSApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(viewModel: .init(loginRepository: LoginRepository(dataSource: LoginDataSource()), loginValidator: LoginDataValidator()))
         }
     }
 }
